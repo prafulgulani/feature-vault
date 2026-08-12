@@ -47,6 +47,7 @@ class Feature(BaseFeature):
     class Meta:
         verbose_name = "Feature Flag"
         verbose_name_plural = "Feature Flags"
+        swappable = "FEATURE_FLAG_MODEL"
 
 
 def get_feature_model() -> type[BaseFeature]:
