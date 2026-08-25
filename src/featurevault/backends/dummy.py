@@ -22,7 +22,7 @@ class DummyBackend(BaseFeatureBackend):
     def get_feature(self, feature_name: str, default: Any = False) -> dict[str, Any]:
         if feature_name in self._features:
             return self._features[feature_name]
-        return {"enabled": default, "conditions": {}, "variants": None, "payloads": None}
+        return {"enabled": default, "conditions": {}, "variants": None}
 
     def get_all_features(self) -> dict[str, dict[str, Any]]:
         return self._features.copy()

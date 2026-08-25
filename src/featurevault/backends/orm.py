@@ -30,7 +30,7 @@ class ORMBackend(BaseFeatureBackend):
         return f"{self.cache_prefix}{feature_name}"
 
     def get_feature(self, feature_name: str, default: Any = None) -> dict[str, Any]:
-        # 1. Check cache first
+        # Check cache first
         cache_key = self._get_cache_key(feature_name)
         cached_data = self.cache.get(cache_key)
 
